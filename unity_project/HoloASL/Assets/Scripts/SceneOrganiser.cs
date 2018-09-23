@@ -74,7 +74,7 @@ public class SceneOrganiser : MonoBehaviour {
         textMesh.anchor = TextAnchor.MiddleCenter;
         textMesh.alignment = TextAlignment.Center;
         textMesh.fontSize = 50;
-        textMesh.text = "Hi there!";
+        textMesh.text = "Welcome to speech to sign language translator!";
 
         return textMesh;
     }

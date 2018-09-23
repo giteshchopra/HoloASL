@@ -38,7 +38,7 @@ public class Interactions : GazeInput
                 }
                 else
                 {
-                    Bot.Instance.SetBotResponseText("Requesting Conversation...");
+                    Bot.Instance.SetBotResponseText("Requesting conversation...");
                     StartCoroutine(Bot.Instance.StartConversation());
                 }
             }

@@ -12879,11 +12879,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\USC\\Sem 1\\AR\\Projects\\HoloASL\\HoloASL-bot\\HoloASL\\HoloASL.csproj",
+      "projectUniqueName": "E:\\USC\\Sem 1\\AR\\Projects\\HoloASL\\azure_bot\\HoloASL\\HoloASL.csproj",
       "projectName": "HoloASL",
-      "projectPath": "E:\\USC\\Sem 1\\AR\\Projects\\HoloASL\\HoloASL-bot\\HoloASL\\HoloASL.csproj",
+      "projectPath": "E:\\USC\\Sem 1\\AR\\Projects\\HoloASL\\azure_bot\\HoloASL\\HoloASL.csproj",
       "packagesPath": "C:\\Users\\sriva\\.nuget\\packages\\",
-      "outputPath": "E:\\USC\\Sem 1\\AR\\Projects\\HoloASL\\HoloASL-bot\\HoloASL\\obj\\",
+      "outputPath": "E:\\USC\\Sem 1\\AR\\Projects\\HoloASL\\azure_bot\\HoloASL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
