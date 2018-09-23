@@ -1,0 +1,8 @@
+unity_project/Library
+unity_project/UnityPackageManager/
+unity_project/.vs/
+unity_project/App
+unity_project/Temp
+unity_project/UWP
+azure_bot/HoloASL/obj/Release
+azure_bot/HoloASL/obj/Debug
