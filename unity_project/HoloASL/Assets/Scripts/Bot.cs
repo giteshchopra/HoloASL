@@ -113,7 +113,10 @@ public class Bot : MonoBehaviour {
         // Update UI with dictation captured
         Debug.Log($"User just said: {text}");
         SetBotResponseText(text);
-
+        if (text.Contains("hello"))
+        {
+            PlayAnimationForWord("hello");
+        }
         // Send dictation to Bot
         // StartCoroutine(SendMessageToBot(text, botId, botName, "message"));
         // StopCapturingAudio();
@@ -224,6 +227,10 @@ public class Bot : MonoBehaviour {
     internal void SetBotResponseText(string responseString)
     {
         SceneOrganiser.Instance.botResponseText.text = responseString;
+    }
+    internal void PlayAnimationForWord(string word)
+    {
+        GameAnimations.Instance.PlayAnimation();
     }
     // Update is called once per frame
     void Update () {

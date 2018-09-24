@@ -258,6 +258,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Bot.cs" />
     <Compile Include="Assets\Scripts\BotObjects.cs" />
+    <Compile Include="Assets\Scripts\GameAnimations.cs" />
     <Compile Include="Assets\Scripts\GazeInput.cs" />
     <Compile Include="Assets\Scripts\Interactions.cs" />
     <Compile Include="Assets\Scripts\SceneOrganiser.cs" />
