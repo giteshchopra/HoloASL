@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +9,7 @@ public class GameAnimations : MonoBehaviour {
     /// </summary>
     public static GameAnimations Instance;
 
-    internal Animator WordAnimation;
+    internal Animator wordAnimation;
 
     /// <summary>
     /// Called on Initialization
@@ -21,15 +22,25 @@ public class GameAnimations : MonoBehaviour {
     void Start () {
 
         //Fetch the Animator from GameObject
-        WordAnimation = GetComponent<Animator>();
+        wordAnimation = GetComponent<Animator>();
     }
 
-    public void PlayAnimation()
+    public void PlayAnimation(string text)
     {
-        // wordAnimation["AlpF"].wrapMode = WrapMode.Once;
-        WordAnimation.Play("AlpF");
-        Wait(5);
-        WordAnimation.Play("AlpL");
+        string[] words = text.Split(' ');
+        var wordToAnimMap = new Dictionary<string, string>(StringComparer.CurrentCultureIgnoreCase)
+        {
+            { "hello", "AlpF"},
+            { "hi", "AlpL" }
+        };
+        foreach (string word in words)
+        {
+            if (wordToAnimMap.ContainsKey(word))
+            {
+                string animName = wordToAnimMap[word];
+                wordAnimation.Play(animName);
+            }
+        }
     }
     IEnumerator Wait(float duration)
     {
