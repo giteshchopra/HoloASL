@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class GameAnimations : MonoBehaviour {
@@ -25,14 +27,21 @@ public class GameAnimations : MonoBehaviour {
         wordAnimation = GetComponent<Animator>();
     }
 
+    private Dictionary<string, string> LoadJSONData()
+    {
+        string filePath = Path.Combine(Application.streamingAssetsPath, "animationsMapping.json");
+        if (File.Exists(filePath))
+        {
+            string dataAsJSON = File.ReadAllText(filePath);
+            return JsonConvert.DeserializeObject<Dictionary<string, string>>(dataAsJSON);
+        }
+        return null;
+    }
+
     public void PlayAnimation(string text)
     {
         string[] words = text.Split(' ');
-        var wordToAnimMap = new Dictionary<string, string>(StringComparer.CurrentCultureIgnoreCase)
-        {
-            { "hello", "AlpF"},
-            { "hi", "AlpL" }
-        };
+        var wordToAnimMap = LoadJSONData();
         foreach (string word in words)
         {
             if (wordToAnimMap.ContainsKey(word))
